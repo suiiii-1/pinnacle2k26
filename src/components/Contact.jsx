@@ -31,7 +31,7 @@ export default function Contact() {
               </div>
               <div className="flex items-center gap-2">
                 <Phone size={16} className="text-accent" />
-                <a className="hover:text-accent" href="tel:+919600000000">+91 96000 00000</a>
+                <a className="hover:text-accent" href="tel:+916374766414">+91 63747 66414</a>
               </div>
             </div>
           </GlassCard>
@@ -39,7 +39,7 @@ export default function Contact() {
             <h3 className="text-xl font-semibold text-text mb-2">Social</h3>
             <div className="flex gap-3">
               <motion.a
-                href="https://instagram.com"
+                href="https://www.instagram.com/pinnacle2k26/"
                 target="_blank"
                 rel="noreferrer"
                 whileHover={{ y: -2 }}
@@ -49,7 +49,7 @@ export default function Contact() {
                 <Instagram size={18} />
               </motion.a>
               <motion.a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/departmentofiteec/"
                 target="_blank"
                 rel="noreferrer"
                 whileHover={{ y: -2 }}

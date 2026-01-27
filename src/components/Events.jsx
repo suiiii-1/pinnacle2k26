@@ -1,13 +1,21 @@
 "use client";
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { EVENT_CATEGORIES, events as eventData } from '../data/events';
 import EventCard from './EventCard';
 import { motion, AnimatePresence } from 'framer-motion';
 
-export default function Events() {
-  const [category, setCategory] = useState(EVENT_CATEGORIES[0]);
+export default function Events({
+  initialCategory = EVENT_CATEGORIES[0],
+  showTabs = true,
+  title = 'Choose your battlefield',
+  subtitle = 'Technical. Non Technical. Online. Pick your arena and conquer.',
+  sectionId = 'events',
+  showNotice = true,
+}) {
+  const [category, setCategory] = useState(initialCategory);
   const [activeEvent, setActiveEvent] = useState(null);
+  const detailsRef = useRef(null);
 
   const filtered = useMemo(
     () => eventData.filter((ev) => ev.category === category),
@@ -16,31 +24,54 @@ export default function Events() {
 
   const closeModal = () => setActiveEvent(null);
 
+  useEffect(() => {
+    if (!activeEvent || !detailsRef.current) return;
+    if (window.innerWidth < 1024) {
+      detailsRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [activeEvent]);
+
   return (
-    <section id="events" className="py-20 md:py-24 section-gradient relative">
+    <section id={sectionId} className="py-20 md:py-24 section-gradient relative">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-10">
           <div>
             <p className="text-accent font-semibold text-xs uppercase tracking-[0.25em]">Events</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-text">Choose your battlefield</h2>
-            <p className="text-gray-300 mt-2">Technical. Non Technical. Online. Pick your arena and conquer.</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-text">{title}</h2>
+            <p className="text-gray-300 mt-2">{subtitle}</p>
           </div>
-          <div className="flex flex-wrap gap-2">
-            {EVENT_CATEGORIES.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setCategory(cat)}
-                className={`px-4 py-2 rounded-full border text-sm font-semibold transition ${
-                  category === cat
-                    ? 'bg-accent text-white border-accent shadow-glow'
-                    : 'border-white/15 text-gray-200 hover:border-accent/60'
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
+          {showTabs && (
+            <div className="flex flex-wrap gap-2">
+              {EVENT_CATEGORIES.map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => setCategory(cat)}
+                  className={`px-4 py-2 rounded-full border text-sm font-semibold transition ${
+                    category === cat
+                      ? 'bg-accent text-white border-accent shadow-glow'
+                      : 'border-white/15 text-gray-200 hover:border-accent/60'
+                  }`}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
+
+        {showNotice && (
+          <div className="mb-8 rounded-2xl border border-accent/30 bg-black/40 p-5 text-gray-200">
+            <p className="text-accent font-semibold mb-2">Notice</p>
+            <p>
+              All participants must first pay the Symposium Entry Fee of ₹150 to register for the symposium. This fee
+              includes food and accessories and is mandatory for everyone.
+            </p>
+            <p className="mt-3">
+              Then the participant can register for each event separately. Each event has a separate registration fee
+              inside its respective Google Form.
+            </p>
+          </div>
+        )}
 
         <div className="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,380px)] gap-6 lg:gap-8">
           <div className="grid sm:grid-cols-2 gap-4">
@@ -58,7 +89,7 @@ export default function Events() {
               ))}
             </AnimatePresence>
           </div>
-          <div className="lg:sticky lg:top-24 h-fit">
+          <div ref={detailsRef} className="lg:sticky lg:top-24 h-fit">
             <div className="glass-card rounded-3xl border border-accentDeep/40 p-5 md:p-6 min-h-[380px] bg-black/50 shadow-[0_0_45px_rgba(140,15,15,0.35)]">
               {!activeEvent ? (
                 <div className="h-full flex items-center justify-center">

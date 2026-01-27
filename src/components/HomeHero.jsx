@@ -17,6 +17,23 @@ function scrollToId(id) {
 export default function HomeHero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none" aria-hidden>
+        <motion.div
+          className="absolute -top-24 -left-20 h-64 w-64 rounded-full bg-accent/20 blur-3xl"
+          animate={{ x: [0, 40, -10, 0], y: [0, 20, -30, 0], scale: [1, 1.15, 0.95, 1] }}
+          transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut' }}
+        />
+        <motion.div
+          className="absolute top-16 right-[-6rem] h-72 w-72 rounded-full bg-rose-500/20 blur-[90px]"
+          animate={{ x: [0, -30, 20, 0], y: [0, -20, 30, 0], scale: [1, 0.9, 1.1, 1] }}
+          transition={{ duration: 20, repeat: Infinity, ease: 'easeInOut' }}
+        />
+        <motion.div
+          className="absolute bottom-[-6rem] left-1/3 h-80 w-80 rounded-full bg-amber-300/15 blur-[110px]"
+          animate={{ x: [0, 25, -25, 0], y: [0, -25, 15, 0], scale: [1, 1.2, 1, 1] }}
+          transition={{ duration: 22, repeat: Infinity, ease: 'easeInOut' }}
+        />
+      </div>
       <LiquidEther />
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-background" aria-hidden />
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-center space-y-6 pt-0">
@@ -63,19 +80,13 @@ export default function HomeHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center"
+          className="flex justify-center"
         >
           <Button
             onClick={() => window.open(ENTRY_FORM_LINK, '_blank')}
             className="bg-accent text-white px-6 py-3 rounded-lg text-sm font-semibold hover:shadow-glow transform hover:-translate-y-0.5 transition"
           >
             REGISTER NOW
-          </Button>
-          <Button
-            onClick={() => scrollToId('events')}
-            className="border border-white/30 text-text px-6 py-3 rounded-lg text-sm font-semibold hover:border-accent hover:text-accent transition"
-          >
-            EXPLORE EVENTS
           </Button>
         </motion.div>
         <motion.p

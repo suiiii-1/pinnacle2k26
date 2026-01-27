@@ -1,5 +1,6 @@
 export const EVENT_CATEGORIES = ['Technical', 'Non Technical', 'Online'];
 export const ENTRY_FORM_LINK = 'https://forms.gle/pinnacle-entry-fee';
+export const HACKATHON_GOOGLE_FORM_LINK = 'https://forms.gle/ohGqmT7rWjUTxWm6A';
 
 export const events = [
   {
@@ -9,7 +10,7 @@ export const events = [
     description: 'Present original research or innovative solutions aligned with emerging tech trends.',
     teamSize: '1-3',
     format: '8 minute presentation + 2 minute Q&A',
-    formLink: 'https://forms.gle/pinnacle-paper-presentation',
+    formLink: 'https://forms.gle/S5TYV5QzwtYSbYLw9',
     rules: [
       'Original work only; plagiarism will lead to disqualification.',
       'Presentations must be in PDF and shared 30 minutes before the slot.',
@@ -23,7 +24,7 @@ export const events = [
     description: 'Algorithmic coding sprint that tests problem solving under pressure.',
     teamSize: 'Solo / Duo',
     format: '2 rounds | Online qualifiers followed by onsite finals',
-    formLink: 'https://forms.gle/pinnacle-code-zilla',
+    formLink: 'https://forms.gle/b9X4udfkUtuD63ev5',
     rules: [
       'Use of AI assistants during finals is prohibited.',
       'Points awarded for accuracy and execution time.',
@@ -37,7 +38,7 @@ export const events = [
     description: 'Hunt, identify, and fix hidden bugs across codebases.',
     teamSize: 'Solo / Duo',
     format: 'Single round | Debug curated issues within time limit',
-    formLink: 'https://forms.gle/pinnacle-bug-mash',
+    formLink: 'https://forms.gle/cuaPVB47vdomeYYg9',
     rules: [
       'Do not delete test cases; fixes must pass provided tests.',
       'Partial fixes score partial points.',
@@ -65,7 +66,7 @@ export const events = [
     description: 'Rapid UI challenge focusing on responsive layouts and accessibility.',
     teamSize: 'Solo / Duo',
     format: 'Single round | Build a landing page within 90 minutes',
-    formLink: 'https://forms.gle/pinnacle-web-design-sprint',
+    formLink: 'https://forms.gle/mcfBJUUXT9rXVvME8',
     rules: [
       'No prebuilt templates; starter code is permitted.',
       'Must meet given accessibility checklist (WCAG AA).',
@@ -79,7 +80,7 @@ export const events = [
     description: 'Design sprint to create high-fidelity prototypes for a surprise brief.',
     teamSize: '1-3',
     format: 'Single round | 2 hours + 5 minute pitch',
-    formLink: 'https://forms.gle/pinnacle-ui-ux-design-jam',
+    formLink: 'https://forms.gle/C4JTECL8WuUf8ZUa8',
     rules: [
       'Use any design tool; submit share link and exports.',
       'Explain design rationale and user journey.',
@@ -93,7 +94,7 @@ export const events = [
     description: 'Startup pitch challenge for tech-first solutions.',
     teamSize: '1-4',
     format: '5 minute pitch + 3 minute Q&A',
-    formLink: 'https://forms.gle/pinnacle-pitch-perfect',
+    formLink: 'https://forms.gle/7fygSgkt9scCYtQZ9',
     rules: [
       'Problem, solution, and impact must be clearly stated.',
       'Include a brief go-to-market and sustainability plan.',
@@ -121,7 +122,7 @@ export const events = [
     description: 'Structured tech debate with timed arguments and rebuttals.',
     teamSize: '2 per team',
     format: 'Knockout brackets with moderator scoring',
-    formLink: 'https://forms.gle/pinnacle-debate',
+    formLink: 'https://forms.gle/RRafqjQHMmkuXDpM7',
     rules: [
       'Respectful discourse is mandatory.',
       'Cite sources for statistics or claims.',
@@ -135,39 +136,11 @@ export const events = [
     description: 'Creative short-form video challenge with green-screen storytelling.',
     teamSize: '2-4',
     format: 'Single submission; 90 seconds max runtime',
-    formLink: 'https://forms.gle/pinnacle-green-screen',
+    formLink: 'https://forms.gle/3GjwbRtnq7LR7w9Q6',
     rules: [
       'Original footage only; no copyrighted audio.',
       'Safe-for-work content is mandatory.',
       'Judged on creativity, editing, and narrative clarity.',
-    ],
-  },
-  {
-    id: 'box-cricket',
-    title: 'Box Cricket',
-    category: 'Non Technical',
-    description: 'Fast-paced indoor cricket showdown.',
-    teamSize: '6+2 subs',
-    format: 'League + knockout matches',
-    formLink: 'https://forms.gle/pinnacle-box-cricket',
-    rules: [
-      'Standard box-cricket rules; umpires decisions final.',
-      'Non-marking shoes required.',
-      'Maintain sportsmanship; rough play penalized.',
-    ],
-  },
-  {
-    id: 'futsal',
-    title: 'Futsal',
-    category: 'Non Technical',
-    description: 'High-energy futsal tournament on small-sided pitch.',
-    teamSize: '5+3 subs',
-    format: 'League stage followed by knockouts',
-    formLink: 'https://forms.gle/pinnacle-futsal',
-    rules: [
-      'Shin guards recommended; studs not allowed indoors.',
-      'Rolling substitutions permitted.',
-      'Yellow/red card rules apply; referee decisions final.',
     ],
   },
   {
@@ -177,7 +150,7 @@ export const events = [
     description: 'Console gaming battles on trending titles.',
     teamSize: 'Solo / Duo based on title',
     format: 'Heats leading to finals',
-    formLink: 'https://forms.gle/pinnacle-ps5',
+    formLink: 'https://forms.gle/NN45dKbW3eTP7DLe7',
     rules: [
       'Game settings will be announced onsite.',
       'Unsportsmanlike conduct leads to disqualification.',
@@ -191,7 +164,7 @@ export const events = [
     description: 'Showcase any talent through an online submission.',
     teamSize: 'Solo / Duo',
     format: 'Single video submission; 2 minutes max',
-    formLink: 'https://forms.gle/pinnacle-who-got-talent',
+    formLink: 'https://forms.gle/hihkzyUMeViNbwe88',
     rules: [
       'Original performances only; no copyright violations.',
       'Stable camera and clear audio required.',
@@ -205,7 +178,7 @@ export const events = [
     description: 'Capture moments that reflect innovation and energy.',
     teamSize: 'Solo',
     format: 'Submit up to 3 photos with captions',
-    formLink: 'https://forms.gle/pinnacle-photography',
+    formLink: 'https://forms.gle/EgT4vJx1rb5cGzsNA',
     rules: [
       'RAW/JPEG accepted; minimal edits only.',
       'Provide EXIF data on request.',
@@ -219,7 +192,7 @@ export const events = [
     description: 'Design a digital poster promoting tech for good.',
     teamSize: 'Solo / Duo',
     format: 'A3 size, PDF/PNG submission',
-    formLink: 'https://forms.gle/pinnacle-poster-making',
+    formLink: 'https://forms.gle/ia1hQJDxEJpz8iuK8',
     rules: [
       'Original illustrations or royalty-free assets only.',
       'Include a short rationale (100 words).',

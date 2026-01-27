@@ -1,23 +1,20 @@
 "use client";
 
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
-import { Navbar as RBNavbar, Button } from 'reactbits';
+import { Navbar as RBNavbar } from 'reactbits';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ENTRY_FORM_LINK } from '../data/events';
 
 const links = [
-  { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
-  { label: 'Events', href: '#events' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home', href: '/#home', type: 'page' },
+  { label: 'About', href: '/#about', type: 'page' },
+  { label: 'Hackathon', href: '/hackathon', type: 'page' },
+  { label: 'Technical Events', href: '/events/technical', type: 'page' },
+  { label: 'Non Technical', href: '/events/non-technical', type: 'page' },
+  { label: 'Online Events', href: '/events/online', type: 'page' },
+  { label: 'Contact', href: '/#contact', type: 'page' },
 ];
-
-function scrollToId(href) {
-  const id = href.replace('#', '');
-  const el = document.getElementById(id);
-  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -29,16 +26,16 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const handleNav = (href) => {
-    scrollToId(href);
-    setOpen(false);
-  };
 
   return (
     <RBNavbar
-      className={`backdrop-blur-md ${solid ? 'bg-black/70 border-b border-white/10' : 'bg-transparent'} px-6 lg:px-10 py-3`}
+      className="fixed top-4 inset-x-0 z-50 px-4"
     >
-      <div className="max-w-6xl mx-auto flex items-center justify-between text-text">
+      <div
+        className={`max-w-6xl mx-auto flex items-center justify-between text-text rounded-2xl px-6 lg:px-8 py-3 border border-white/10 backdrop-blur-md transition-all ${
+          solid ? 'bg-black/70 shadow-[0_10px_30px_rgba(0,0,0,0.35)]' : 'bg-black/40'
+        }`}
+      >
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center">
             <img src="/logo.png" alt="Pinnacle 26" className="w-7 h-7 object-contain" />
@@ -50,21 +47,16 @@ export default function Navbar() {
         </div>
         <div className="hidden md:flex items-center gap-8">
           {links.map((link) => (
-            <button
+            <Link
               key={link.href}
-              onClick={() => handleNav(link.href)}
+              href={link.href}
               className="text-sm font-medium text-gray-200 hover:text-text transition"
             >
               {link.label}
-            </button>
+            </Link>
           ))}
-          <Button
-            onClick={() => window.open(ENTRY_FORM_LINK, '_blank')}
-            className="bg-accent text-white px-4 py-2 rounded-md hover:shadow-glow transition transform hover:-translate-y-0.5"
-          >
-            REGISTER NOW
-          </Button>
         </div>
+        <div className="hidden md:flex items-center" />
         <button
           className="md:hidden text-text p-2 rounded-md hover:bg-white/10"
           onClick={() => setOpen((p) => !p)}
@@ -83,20 +75,15 @@ export default function Navbar() {
           >
             <div className="flex flex-col gap-3 glass-card p-4 rounded-xl border border-white/10">
               {links.map((link) => (
-                <button
+                <Link
                   key={link.href}
-                  onClick={() => handleNav(link.href)}
+                  href={link.href}
                   className="text-sm font-medium text-gray-200 text-left"
+                  onClick={() => setOpen(false)}
                 >
                   {link.label}
-                </button>
+                </Link>
               ))}
-              <Button
-                onClick={() => window.open(ENTRY_FORM_LINK, '_blank')}
-                className="bg-accent text-white px-4 py-2 rounded-md hover:shadow-glow"
-              >
-                REGISTER NOW
-              </Button>
             </div>
           </motion.div>
         )}

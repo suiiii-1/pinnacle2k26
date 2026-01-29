@@ -1,5 +1,5 @@
 export const EVENT_CATEGORIES = ['Technical', 'Non Technical', 'Online'];
-export const ENTRY_FORM_LINK = 'https://forms.gle/pinnacle-entry-fee';
+export const ENTRY_FORM_LINK = 'https://forms.gle/K84HTeN8rM2fGWzd9';
 export const HACKATHON_GOOGLE_FORM_LINK = 'https://forms.gle/ohGqmT7rWjUTxWm6A';
 
 export const events = [
@@ -52,7 +52,7 @@ export const events = [
     description: 'Logic-heavy quiz covering CS fundamentals, puzzles, and rapid-fire trivia.',
     teamSize: '2-3',
     format: '2 rounds | MCQ prelims and buzzer finale',
-    formLink: 'https://forms.gle/pinnacle-brain-squeezer',
+    formLink: 'https://forms.gle/sUukZ82y4VdnF2zk6',
     rules: [
       'Use of external devices is not allowed.',
       'Time penalties apply for incorrect buzzer attempts.',
@@ -108,7 +108,7 @@ export const events = [
     description: 'Craft effective prompts to solve creative AI challenges.',
     teamSize: 'Solo / Duo',
     format: 'Three themed challenges with scored outputs',
-    formLink: 'https://forms.gle/pinnacle-prompt-hack-ai',
+    formLink: 'https://forms.gle/jtaZJEwxH5NoHzKq9',
     rules: [
       'Only provided AI endpoints may be used.',
       'Share prompt engineering thought process.',
@@ -122,7 +122,7 @@ export const events = [
     description: 'Structured tech debate with timed arguments and rebuttals.',
     teamSize: '2 per team',
     format: 'Knockout brackets with moderator scoring',
-    formLink: 'https://forms.gle/RRafqjQHMmkuXDpM7',
+    formLink: 'https://forms.gle/vd8WW6kdY5AYSpmb9',
     rules: [
       'Respectful discourse is mandatory.',
       'Cite sources for statistics or claims.',

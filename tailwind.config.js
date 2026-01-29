@@ -11,7 +11,7 @@ export default {
       colors: {
         background: '#0b0b0b',
         accent: '#d4af37',
-        accentDeep: '#8c0f0f',
+        accentDeep: '#d4af37',
         text: '#f5f5f5',
       },
       boxShadow: {

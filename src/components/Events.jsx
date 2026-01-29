@@ -69,6 +69,8 @@ export default function Events({
             <p className="mt-3">
               Then the participant can register for each event separately. Each event has a separate registration fee
               inside its respective Google Form.
+              <br />
+              There is no registration fee for online events.
             </p>
           </div>
         )}
@@ -90,7 +92,7 @@ export default function Events({
             </AnimatePresence>
           </div>
           <div ref={detailsRef} className="lg:sticky lg:top-24 h-fit">
-            <div className="glass-card rounded-3xl border border-accentDeep/40 p-5 md:p-6 min-h-[380px] bg-black/50 shadow-[0_0_45px_rgba(140,15,15,0.35)]">
+            <div className="glass-card rounded-3xl border border-accentDeep/40 p-5 md:p-6 min-h-[380px] bg-black/50 shadow-[0_0_45px_rgba(212,175,55,0.35)]">
               {!activeEvent ? (
                 <div className="h-full flex items-center justify-center">
                   <p className="text-accentDeep text-lg font-semibold">Select an Event</p>

@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { LiquidEther, Button } from 'reactbits';
 import { ENTRY_FORM_LINK } from '../data/events';
+import Starfield from './Starfield';
 
 const heroVariants = {
   hidden: { opacity: 0, y: 30 },
@@ -16,7 +17,8 @@ function scrollToId(id) {
 
 export default function HomeHero() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+      <Starfield />
       <div className="absolute inset-0 pointer-events-none" aria-hidden>
         <motion.div
           className="absolute -top-24 -left-20 h-64 w-64 rounded-full bg-accent/20 blur-3xl"
@@ -62,16 +64,16 @@ export default function HomeHero() {
               className="w-56 sm:w-64 md:w-72 lg:w-80 object-contain drop-shadow-[0_0_35px_rgba(212,175,55,0.45)]"
             />
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-wide text-text">
-              <span className="text-accent">Pinnacle</span>'26
+              <span className="text-[#D4AF37]">Pinnacle</span>'26
             </h1>
           </div>
-          <p className="text-accent font-semibold tracking-[0.3em] uppercase text-xs">Department of Information Technology</p>
-          <p className="text-lg md:text-xl text-gray-200 font-semibold">National Level Technical Symposium</p>
+          <p className="text-[#D4AF37] font-semibold tracking-[0.3em] uppercase text-xs">Department of Information Technology</p>
+          <p className="text-lg md:text-xl text-gray-200 font-semibold">International Level Technical Symposium</p>
           <p className="text-sm md:text-base text-gray-300">
             Department of Information Technology | Easwari Engineering College
           </p>
           <div className="text-sm md:text-base inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10">
-            <span className="text-accent font-semibold">14 February 2026</span>
+            <span className="text-[#D4AF37] font-semibold">14 February 2026</span>
             <span className="text-gray-300">|</span>
             <span className="text-gray-200">8:15 AM – 4:00 PM</span>
           </div>
@@ -84,7 +86,7 @@ export default function HomeHero() {
         >
           <Button
             onClick={() => window.open(ENTRY_FORM_LINK, '_blank')}
-            className="bg-accent text-white px-6 py-3 rounded-lg text-sm font-semibold hover:shadow-glow transform hover:-translate-y-0.5 transition"
+            className="bg-[#D4AF37] text-white px-6 py-3 rounded-lg text-sm font-semibold hover:shadow-glow transform hover:-translate-y-0.5 transition"
           >
             REGISTER NOW
           </Button>

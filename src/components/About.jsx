@@ -18,7 +18,7 @@ export default function About() {
             <p className="text-accent font-semibold uppercase tracking-[0.25em] text-xs">About Pinnacle</p>
             <h2 className="text-3xl md:text-4xl font-bold text-text">Where ideas ignite and teams excel.</h2>
             <p className="text-gray-300 leading-relaxed">
-              Pinnacle'26 is the signature national-level technical symposium hosted by the Department of Information
+              Pinnacle'26 is the signature international-level technical symposium hosted by the Department of Information
               Technology, Easwari Engineering College. It celebrates innovation, encourages competition, and rewards
               creativity through a curated blend of Technical, Non-Technical, and Online events designed to challenge
               every participant.

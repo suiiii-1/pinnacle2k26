@@ -4,8 +4,8 @@ import Footer from '../components/Footer';
 import NoticeBar from '../components/NoticeBar';
 
 export const metadata = {
-  title: 'PINNACLE\'26 | National Level Technical Symposium',
-  description: 'Innovate. Compete. Conquer. National Level Technical Symposium by Department of IT, Easwari Engineering College.',
+  title: 'PINNACLE\'26 | International Level Technical Symposium',
+  description: 'Innovate. Compete. Conquer. International Level Technical Symposium by Department of IT, Easwari Engineering College.',
 };
 
 export default function RootLayout({ children }) {

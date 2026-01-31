@@ -27,7 +27,7 @@ export default function Contact() {
             <div className="space-y-2 text-sm text-gray-200">
               <div className="flex items-center gap-2">
                 <Mail size={16} className="text-accent" />
-                <a className="hover:text-accent" href="mailto:pinnacleit@eec.edu">pinnacleit@eec.edu</a>
+                <a className="hover:text-accent" href="mailto:eecpinnacle19@gmail.com">eecpinnacle19@gmail.com</a>
               </div>
               <div className="flex items-center gap-2">
                 <Phone size={16} className="text-accent" />
@@ -59,7 +59,7 @@ export default function Contact() {
                 <Linkedin size={18} />
               </motion.a>
               <motion.a
-                href="mailto:pinnacleit@eec.edu"
+                href="mailto:eecpinnacle19@gmail.com"
                 whileHover={{ y: -2 }}
                 className="p-2 rounded-full bg-white/5 border border-white/10 hover:border-accent"
                 aria-label="Email"

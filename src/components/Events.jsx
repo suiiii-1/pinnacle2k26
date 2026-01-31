@@ -135,7 +135,7 @@ export default function Events({
                   </div>
                   <button
                     onClick={() => window.open(activeEvent.formLink, '_blank')}
-                    className="w-full bg-accent text-black font-semibold py-3 rounded-xl hover:shadow-glow transition"
+                    className="w-full bg-[#D4AF37] text-white font-semibold py-3 rounded-xl hover:shadow-glow transition"
                   >
                     REGISTER NOW
                   </button>

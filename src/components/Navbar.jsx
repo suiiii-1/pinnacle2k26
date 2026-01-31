@@ -42,7 +42,7 @@ export default function Navbar() {
           </div>
           <div className="leading-tight">
             <p className="font-semibold">PINNACLE'26</p>
-            <p className="text-xs text-gray-300">National Level Symposium</p>
+            <p className="text-sm text-gray-300">International Level Symposium</p>
           </div>
         </div>
         <div className="hidden md:flex items-center gap-8">
@@ -50,7 +50,7 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-gray-200 hover:text-text transition"
+              className="text-base font-semibold text-gray-200 hover:text-text transition"
             >
               {link.label}
             </Link>

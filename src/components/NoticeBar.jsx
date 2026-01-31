@@ -47,7 +47,7 @@ export default function NoticeBar() {
             href={ENTRY_FORM_LINK}
             target="_blank"
             rel="noreferrer"
-            className="whitespace-nowrap rounded-xl bg-accent px-4 py-2 text-xs sm:text-sm font-semibold text-black hover:shadow-glow transition"
+            className="whitespace-nowrap rounded-xl bg-[#D4AF37] px-4 py-2 text-xs sm:text-sm font-semibold text-white hover:shadow-glow transition"
           >
             Proceed to Payment
           </a>

@@ -32,8 +32,8 @@ export const events = [
     ],
   },
   {
-    id: 'bug-mash',
-    title: 'Bug Mash',
+    id: 'bug-smash',
+    title: 'Bug Smash',
     category: 'Technical',
     description: 'Hunt, identify, and fix hidden bugs across codebases.',
     teamSize: 'Solo / Duo',

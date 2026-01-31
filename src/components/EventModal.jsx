@@ -57,7 +57,7 @@ export default function EventModal({ open, onClose, event }) {
                   <div className="flex justify-end">
                     <Button
                       onClick={() => window.open('https://forms.gle/placeholder', '_blank')}
-                      className="bg-accent text-white px-5 py-2 rounded-lg hover:shadow-glow"
+                      className="bg-[#D4AF37] text-white px-5 py-2 rounded-lg hover:shadow-glow"
                     >
                       REGISTER NOW
                     </Button>
